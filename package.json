@@ -1,0 +1,32 @@
+{
+  "name": "swifttranslator-automation",
+  "version": "1.0.0",
+  "description": "Playwright automation tests for Swift Translator (Singlish to Sinhala)",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:ui": "playwright test --ui",
+    "test:report": "playwright show-report"
+  },
+  "keywords": [
+    "playwright",
+    "automation",
+    "testing"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.58.0",
+    "@types/node": "^25.1.0"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "playwright": "^1.58.0",
+    "playwright-core": "^1.58.0"
+  },
+  "type": "commonjs"
+}
