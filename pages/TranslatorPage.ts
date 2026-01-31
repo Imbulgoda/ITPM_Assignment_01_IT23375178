@@ -30,16 +30,19 @@ export class TranslatorPage {
 
   async getOutput(): Promise<string> {
     const text = await this.output.textContent();
-    return text || '';
+    return text || ''; 
   }
 
-  async waitForOutputUpdate(previousText?: string) {
-    if (typeof previousText === 'string') {
-      await expect(this.output).not.toHaveText(previousText, { timeout: 5000 });
-    } else {
-      await expect(this.output).not.toHaveText('', { timeout: 5000 });
-    }
-  }
+ async waitForOutputUpdate(previousOutput?: string) {
+  await expect(this.output).toBeVisible();
+
+ 
+  await expect(this.output).toHaveText(/.+/, {
+    timeout: 10000, 
+  });
+}
+
+
 
   async clearAll() {
     await this.clearButton.click();

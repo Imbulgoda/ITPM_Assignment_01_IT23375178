@@ -12,7 +12,7 @@ test.describe('UI Tests - Translator Page', () => {
 
  
 
-  test('Pos_UI_0002 - Clear button resets input and output', async () => {
+  test('Pos_UI_0001 - Clear button resets input and output', async () => {
     await translatorPage.enterText('mata bath oonee.');
 
     const before = await translatorPage.getOutput();
@@ -27,18 +27,18 @@ test.describe('UI Tests - Translator Page', () => {
     await expect(translatorPage.output).toBeEmpty();
   });
 
-  test('Pos_UI_0003 - Page elements visible on load', async () => {
+  test('Pos_UI_0002 - Page elements visible on load', async () => {
     await expect(translatorPage.input).toBeVisible();
     await expect(translatorPage.input).toBeEnabled();
     await expect(translatorPage.output).toBeVisible();
   });
 
-  test('Pos_UI_0004 - Help section accessibility', async () => {
+  test('Pos_UI_0003 - Help section accessibility', async () => {
     await translatorPage.clickHelp();
     await translatorPage.verifyHelpModalVisible();
   });
 
-  test('Neg_UI_0002 - Rapid Clear clicks should not crash UI', async () => {
+  test('Neg_UI_0001 - Rapid Clear clicks should not crash UI', async () => {
     // Ensure input is empty
     await expect(translatorPage.input).toBeVisible();
     await expect(translatorPage.input).toHaveValue('');

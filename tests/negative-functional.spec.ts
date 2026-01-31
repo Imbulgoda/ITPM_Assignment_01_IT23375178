@@ -14,7 +14,7 @@ negativeTestScenarios.forEach((scenario) => {
     const actualOutput = await translatorPage.getOutput();
 
     if (scenario.expected) {
-      expect(actualOutput.trim()).not.toBe(scenario.expected.trim());
+      await expect(actualOutput.trim()).not.toBe(scenario.expected.trim());
     }
     
     console.log(`Test: ${scenario.id}`);

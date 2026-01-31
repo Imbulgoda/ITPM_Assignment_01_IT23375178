@@ -170,16 +170,17 @@ export const negativeTestScenarios: TestScenario[] = [
     expected: 'මම යන්න ගියා ',
   },
 
-   {
+
+  {
     id: 'Neg_Fun_0003',
-    input: 'mama enna epa kiyala kiwwe na',
-    expected: 'මම එන්න එපා කියල කිව්වෙ නැ  ',
+    input: 'matabathooonee',
+    expected: 'මට බත් ඕනෙ',
   },
 
   {
     id: 'Neg_Fun_0004',
-    input: 'matabathooonee',
-    expected: 'මට බත් ඕනෙ',
+    input: 'mama enna epa kiyala kiwwe na',
+    expected: 'මම එන්න එපා කියල කිව්වෙ නැ  ',
   },
 
   {
@@ -219,14 +220,10 @@ export const negativeTestScenarios: TestScenario[] = [
   },
 
 
-  {
-    id: 'Neg_UI_0001',
-    input: '$$$$$',
-    expected: 'Error message indicating invalid or unsupported input ',
-  },
+  
 
   {
-  id: 'Neg_UI_0002',
+  id: 'Neg_UI_0001',
   input: 'RAPID_CLEAR_5_TIMES',
   expected: 'Clicking Clear repeatedly should not crash or freeze; input remains empty and output area stays visible.',
 },

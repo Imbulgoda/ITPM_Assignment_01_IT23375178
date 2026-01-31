@@ -1,172 +1,149 @@
-# IT3040 - ITPM Assignment 1
-## Playwright Automation Tests – SwiftTranslator
+# IT3040 – ITPM Assignment 1  
+## Playwright Automation Tests – Swift Translator
 
-### Student Registration Number
+### Student Registration Number  
 IT23375178
 
-# Swift Translator Automation Tests
+### Student Name  
+I.G.I.N Imbulgoda
 
-This project contains Playwright automation tests for the Swift Translator website (https://www.swifttranslator.com/), which converts Singlish text to Sinhala.
+---
+
+## Introduction
+
+This assignment focuses on automating test cases for the Swift Translator website  
+(https://www.swifttranslator.com/).
+
+The main objective is to test how accurately the system converts *Singlish input into Sinhala output* and to check the stability and usability of the user interface.
+
+All test cases have been automated using Playwright.
+
+---
+
+## Project Overview
+
+- Tested application: Swift Translator  
+- Input language: Singlish  
+- Output language: Sinhala  
+- Automation tool: Playwright  
+- Design pattern used: Page Object Model (POM)
+
+---
 
 ## Project Structure
 
-```
 qan/
 ├── pages/
-│   └── TranslatorPage.ts          # Page Object Model for the translator page
+│ └── TranslatorPage.ts
 ├── test-data/
-│   └── testScenarios.ts            # Test data containing all test scenarios
+│ └── testScenarios.ts
 ├── tests/
-│   ├── positive-functional.spec.ts # Positive functional test cases
-│   ├── negative-functional.spec.ts # Negative functional test cases
-│   └── ui-functional.spec.ts       # UI-related test cases
-├── playwright.config.ts             # Playwright configuration
-├── package.json                     # Project dependencies
-└── README.md                        # This file
-```
+│ ├── positive-functional.spec.ts
+│ ├── negative-functional.spec.ts
+│ └── ui-functional.spec.ts
+├── playwright.config.ts
+├── package.json
+└── README.md
+
+
+---
 
 ## Page Object Model (POM)
 
-This project follows the Page Object Model design pattern:
+- TranslatorPage.ts contains all page elements and actions
+- All test cases use this page class
+- This approach improves code reusability and maintainability
 
-- **TranslatorPage**: Contains all page elements and methods for interacting with the Swift Translator website
-- All test files use the `TranslatorPage` class to interact with the page
-- This ensures maintainability and reusability of page interactions
+---
 
 ## Test Coverage
 
-### Positive Functional Tests (24+ scenarios)
-- Simple, compound, and complex sentences
-- Interrogative and imperative forms
-- Positive and negative sentence forms
-- Greetings, requests, and responses
-- Tense variations (past, present, future)
-- Pronoun variations
-- Mixed language content (Singlish + English)
-- Punctuation and formatting
-- Various input lengths (S, M, L)
+### Positive Functional Tests
+- Simple, compound, and complex sentences  
+- Interrogative and imperative sentences  
+- Positive and negative sentence forms  
+- Greetings, requests, and responses  
+- Tense variations (past, present, future)  
+- Pronoun variations  
+- Mixed Singlish + English inputs  
+- Short, medium, and long inputs  
 
-### Negative Functional Tests (10+ scenarios)
-- Chat-style shorthand (Thx, u, gr8)
-- Joined words without spaces
-- Very long inputs
-- Special characters
-- Edge cases and error conditions
+### Negative Functional Tests
+- Incorrect sentence formats  
+- Joined words without spaces  
+- Very long inputs  
+- Special characters and edge cases  
 
 ### UI Functional Tests
-- Real-time output updates
-- Clear button functionality
+- Page elements visibility  
+- Real-time output generation  
+- Clear button functionality  
+- UI stability during rapid actions  
+
+---
 
 ## Installation
 
-1. Make sure you have Node.js installed (version 16 or higher)
+1. Install Node.js (version 16 or higher)
 
 2. Install dependencies:
 ```bash
 npm install
-```
+Install Playwright browsers:
 
-3. Install Playwright browsers:
-```bash
 npx playwright install
-```
+Running Tests
+Run all tests:
 
-## Running Tests
-
-### Run all tests
-```bash
 npm test
-```
+Run tests in headed mode:
 
-### Run tests in headed mode (see the browser)
-```bash
 npm run test:headed
-```
+Run tests in debug mode:
 
-### Run tests in debug mode
-```bash
 npm run test:debug
-```
+Run tests using Playwright UI:
 
-### Run tests with UI mode
-```bash
 npm run test:ui
-```
+View test report:
 
-### View test report
-```bash
 npm run test:report
-```
+Test Execution Steps
+Navigate to https://www.swifttranslator.com/
 
-## Test Execution Steps
+Enter Singlish text into the input field
 
-For functional test cases, the standard execution steps are:
+Observe automatic Sinhala output generation
 
-1. Navigate to https://www.swifttranslator.com/
-2. Enter Singlish text in the input field
-3. Observe that Sinhala output is generated automatically in real-time
-4. Record the generated Sinhala output as the Actual Output
+Compare actual output with expected output
+
 
 ## Test Case Naming Convention
+Positive Functional Tests: Pos_Fun_XXXX
 
-- **Positive functional tests**: `Pos_Fun_XXXX`
-- **Negative functional tests**: `Neg_Fun_XXXX`
-- **Positive UI tests**: `Pos_UI_XXXX`
-- **Negative UI tests**: `Neg_UI_XXXX`
+Negative Functional Tests: Neg_Fun_XXXX
 
-## Input Length Types
+Positive UI Tests: Pos_UI_XXXX
 
-- **S**: ≤ 30 characters
-- **M**: 31–299 characters
-- **L**: ≥ 300 characters
+Negative UI Tests: Neg_UI_XXXX
 
-## Test Categories
 
-Tests cover the following categories:
+##Notes
 
-1. **Input Type / Domain**
-   - Daily language usage
-   - Greeting / request / response
-   - Word combination / phrase pattern
-   - Mixed Singlish + English
-   - Slang / informal language
-   - Typographical error handling
-   - Names / places / common English words
-   - Punctuation / numbers
-   - Formatting (spaces / line breaks / paragraph)
-   - Empty/cleared input handling
+The application is designed for standard Singlish-to-Sinhala conversion
 
-2. **Sentence / Grammar Focus**
-   - Simple sentence
-   - Compound sentence
-   - Complex sentence
-   - Interrogative (question)
-   - Imperative (command)
-   - Present tense / Past tense / Future tense
-   - Negation (negative form)
-   - Pronoun variation (I/you/we/they)
-   - Plural form
+Informal chat-style abbreviations may not convert correctly
 
-3. **Quality Focus**
-   - Accuracy validation
-   - Robustness validation
-   - Formatting preservation
-   - Real-time output update behavior
-   - Error handling / input validation
+Screenshots and videos are captured on test failures
 
-## Notes
+HTML reports are generated after test execution
 
-- The application is designed for standard Singlish-to-Sinhala transliteration
-- Chat-style shorthand (e.g., "Thx", "u", "gr8") may not be handled correctly
-- Test results are logged to the console for manual verification
-- Screenshots and videos are captured on test failures
-- HTML reports are generated after test execution
-
-## Troubleshooting
+Troubleshooting
 
 If tests fail:
 
-1. Check your internet connection
-2. Verify the website is accessible: https://www.swifttranslator.com/
-3. Check browser installation: `npx playwright install`
-4. Review test logs and screenshots in the `test-results/` directory
+Check internet connection
+
+Verify website accessibility
+
+Run npx playwright install
