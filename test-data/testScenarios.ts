@@ -215,8 +215,8 @@ export const negativeTestScenarios: TestScenario[] = [
 
   {
     id: 'Neg_Fun_0010',
-    input: 'mama gedhara yanavaa honda avasthawaka. api lunch kalin kello ekka game kela. passe mama computer ekata innawa programming karanawa. api evening walk karanna yamu kiyala decide kela. mama hondatama thama friends ekka time spend karanawa kiyala hithenawa.',
-    expected: 'මම ගෙදර යනවා හොඳ අවස්ථාවක. අපි ලන්ච් කලින් කෙල්ලෝ එක්ක ගේම් කළා. පසෙ මම කොම්පියුටර් එකට ඉන්නවා ප්‍රෝග්‍රැමින් කරමින්. අපි සන්ධ්‍යාවේ වොක් කරන්න යමු කියලා තීරණය කළා. මම හොඳටම මගේ මිතුරන් එක්ක කාලය ගත කරනවා කියලා හිතනවා.',
+    input: 'Mama adha yanna hitiye campus ekata. Eth mata yanna beri una. Adha evaluation eka thibbadha? Assignment eka submit karadha?',
+    expected: 'මම අද කැම්පස් එකට යන්න හිටියේ. එත් මට යන්න බැරි උනා. අද ඇගයීම තිබ්බද? පැවරුම භාර දුන්නද?',
   },
 
 
