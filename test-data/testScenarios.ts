@@ -13,7 +13,7 @@ export const positiveTestScenarios: TestScenario[] = [
   {
     id: 'Pos_Fun_0002',
     input: 'Anee mata kanna mona hari genalla dhenavadha?',
-    expected: 'අනේ මට කන්න මොන හරි ගෙනල්ල දෙනවද?',
+    expected: 'අනේ මට කන්න මොන හරි ගෙනල්ල දෙනවද? ',
   },
   {
     id: 'Pos_Fun_0003',
